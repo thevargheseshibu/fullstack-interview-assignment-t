@@ -5,8 +5,6 @@ import Nav from "./components/Navbar/Nav";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  const [locale, setLocale] = useState("en");
-
   return (
     <Router>
       <div className="app-grid">

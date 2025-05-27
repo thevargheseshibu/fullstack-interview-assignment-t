@@ -28,7 +28,7 @@ export default function DrinkSearch() {
       />
       <button onClick={searchDrinks}>Search</button>
 
-      {/* Pass filtered drinks to Dashboard */}
+  
       <Dashboard drinks={drinks} />
     </div>
   );

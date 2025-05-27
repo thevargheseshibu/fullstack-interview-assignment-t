@@ -3,7 +3,6 @@ const { processDrinks } = require("../utils/processDrinks");
 
 exports.getDrinks = async (req, res) => {
   const { search } = req.body;
-  console.log("drinks reached1", search);
 
   if (!search) {
     return res.status(400).json({ error: "Search query is required." });
@@ -13,7 +12,6 @@ exports.getDrinks = async (req, res) => {
     const apiUrl = `${process.env.API_URL}?s=${encodeURIComponent(search)}`;
 
     const response = await axios.get(apiUrl);
-    console.log("drinks reached3", response);
 
     const drinks = processDrinks(response.data);
 
